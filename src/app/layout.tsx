@@ -19,7 +19,12 @@ export default function RootLayout({
     <html lang="ja">
       <body className={`${notoSansJp.className} flex min-h-screen flex-col`}>
         <Header />
-        {children}
+        <main className="grow px-2">
+          <div className="mx-auto max-w-screen-xl md:grid md:grid-cols-8 md:gap-4">
+            <div className="mb-16 border md:col-span-5 md:mb-0">{children}</div>
+            <div className="border md:col-span-3">sidebar</div>
+          </div>
+        </main>
       </body>
     </html>
   )
